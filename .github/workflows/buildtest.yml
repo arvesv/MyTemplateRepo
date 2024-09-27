@@ -5,6 +5,7 @@ on:
   pull_request:
     branches:
       - master
+  push:
  
 jobs:
   build:
@@ -24,12 +25,12 @@ jobs:
       with:
         global-json-file: global.json
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore src
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build src --no-restore
 
     - name: Test
-      run: dotnet test --no-build --verbosity normal --logger "trx;LogFileName=test_results.trx"
+      run: dotnet test src --no-build --verbosity normal --logger "trx;LogFileName=test_results.trx"
 
     - name: Publish Test Results
       uses: EnricoMi/publish-unit-test-result-action@v2
