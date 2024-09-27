@@ -9,13 +9,12 @@ The project in the "src" folder is just there to have something to test the pipe
 
 ## File explanation
 
-* [_global.json_](https://learn.microsoft.com/en-us/dotnet/core/tools/global-json) - Specifices the version of the .NET sdk used. Used by the dotnet cli tools as well ass the GitHub action actions/setup-dotnet@v4
+* [_global.json_](https://learn.microsoft.com/en-us/dotnet/core/tools/global-json) - Specifices the version of the .NET sdk used. Used by the dotnet cli tools and the GitHub Action "actions/setup-dotnet@v4"
 
 * <a name="anker-1">_[.editorconfig](https://editorconfig.org/)_</a> - Some commom settings for tab/spaces etc supported by some editors (Visual Studio Code requres a plugin for this to work)
 
-* .gitignore - Just beacuse :grinning:
+* [.gitignore](https://github.com/arvesv/MyTemplateRepo/blob/main/.github/workflows/buildtest.yml) - Just beacuse :grinning:
 
-* .gitattributes -  Standarize line endings
+* .gitattributes -  Standard line endings between CR and CRLF 
 
 * buildtest.yml - A workflow that builds, tests and generated a test report.
-
